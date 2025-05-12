@@ -1,0 +1,48 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "react-hooks",
+    "import"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "@typescript-eslint/no-explicit-any": "warn",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off"
+  },
+  "ignorePatterns": [
+    "node_modules",
+    "dist",
+    ".next",
+    "build",
+    ".turbo"
+  ],
+  "overrides": [
+    {
+      "files": ["**/*.js", "**/*.jsx", "**/*.mjs", "**/*.cjs"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ]
+}

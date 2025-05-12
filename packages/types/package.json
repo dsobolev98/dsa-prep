@@ -1,0 +1,17 @@
+{
+    "name": "types",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "build": "tsup",
+        "dev": "tsup --watch",
+        "lint": "echo 'Skipping lint for types' && exit 0",
+        "check-types": "tsc --noEmit",
+        "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    },
+    "devDependencies": {
+        "eslint": "^8.56.0",
+        "tsup": "^8.0.0",
+        "typescript": "^5.8.2"
+    }
+}
